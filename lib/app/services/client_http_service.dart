@@ -1,21 +1,15 @@
 import 'package:dio/dio.dart';
 import 'package:flutterarchitecture/app/interfaces/client_http_interface.dart';
 
-class ClientHttpService implements IClientHttp{
-
+class ClientHttpService implements IClientHttp {
   final Dio dio = Dio();
 
   @override
-  void addToken(String token) {
-
-  }
+  void addToken(String token) {}
 
   @override
-  Future<Map<String, dynamic>> get(String url) async {
-
-     var response = await dio.get(url);
-     return response.data;
-
+  Future get(String url) async {
+    var response = await dio.get(url);
+    return response.data;
   }
-
 }

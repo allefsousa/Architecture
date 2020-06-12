@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -12,9 +13,7 @@ class _LoginPageState extends State<LoginPage> {
         title: Text("Login Page"),
       ),
       body: Center(
-        child: Switch(value: false, onChanged: (value){
-
-        }),
+        child: Switch(value: false, onChanged: (value) {}),
       ),
     );
   }

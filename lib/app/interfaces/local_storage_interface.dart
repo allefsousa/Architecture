@@ -1,8 +1,7 @@
-abstract class ILocalStorage{
-
+abstract class ILocalStorage {
   Future get(String key);
+
   Future delete(String key);
-  Future put(String key,dynamic value);
 
-
+  Future put(String key, dynamic value);
 }
