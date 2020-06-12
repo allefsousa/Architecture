@@ -9,6 +9,10 @@ class ApiadvisorViewModel {
   ApiadvisorViewModel(this.repository);
 
   fill() async {
-    model.value = await repository.getTemp();
+    try{
+      model.value = await repository.getTemp();
+    }catch (e){
+      print(e);
+    }
   }
 }
