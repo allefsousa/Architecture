@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutterarchitecture/app/models/apiadvisor_model.dart';
 import 'package:flutterarchitecture/app/pages/home/home_controller.dart';
-import 'package:flutterarchitecture/app/repositories/apiadvisor_repository.dart';
-import 'package:flutterarchitecture/app/services/client_http_service.dart';
-import 'package:flutterarchitecture/app/viewmodels/apiadvisor_viewmodel.dart';
+
 
 import 'components/custom_switch_widget.dart';
 
@@ -13,8 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final controller = HomeController(
-      ApiadvisorViewModel(ApiadvisorRepository(ClientHttpService())));
+  final controller = Modular.get<HomeController>();
 
   @override
   Widget build(BuildContext context) {

@@ -4,14 +4,12 @@ import 'package:flutterarchitecture/app/viewmodels/change_theme_viewmodel.dart';
 
 class AppController {
   //singleton
-  static final AppController instance = AppController._();
 
-  AppController._() {
+  final ChangeThemeViewModel changeThemeViewModel ;
+
+  AppController(this.changeThemeViewModel){
     changeThemeViewModel.init();
   }
-
-  final ChangeThemeViewModel changeThemeViewModel =
-      ChangeThemeViewModel(storage: SharedLocalStorageService());
 
   bool get IsDark => changeThemeViewModel.config.themeSwitch.value;
 
